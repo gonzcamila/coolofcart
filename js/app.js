@@ -1,6 +1,6 @@
 // ===== Settings =====
 
-const COOL_OFF_MS = 1 * 60 * 1000;
+const COOL_OFF_MS = 48 * 60 * 60 * 1000;
 
 // ===== Saving and loading =====
 
