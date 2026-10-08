@@ -87,6 +87,8 @@ a:focus-visible {
 
 /* ==========================
    4. LAYOUT
+   Breakpoints used in this file:
+     768px  — tablet and larger
    ========================== */
 
 header {
@@ -107,6 +109,8 @@ section { margin-bottom: var(--space-xl); }
    5. FORMS
    ========================== */
 
+form { max-width: 30rem; }
+
 label {
     display: block;
     margin-bottom: var(--space-sm);
@@ -119,6 +123,12 @@ input {
     padding: var(--space-sm);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
+}
+
+#form-error,
+#load-error {
+    color: var(--color-danger);
+    margin-bottom: var(--space-md);
 }
 
 
@@ -151,4 +161,50 @@ button:focus-visible {
 .btn-danger {
     background-color: var(--color-danger);
     color: var(--color-surface);
+}
+
+
+/* ==========================
+   7. ITEM CARDS
+   ========================== */
+
+.item-list {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+}
+
+.item-card {
+    background-color: var(--color-surface-alt);
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--color-accent);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.item-card p { margin-bottom: var(--space-sm); }
+
+.item-name { font-weight: bold; }
+
+.item-status { color: var(--color-muted); }
+
+.item-card button {
+    margin-top: var(--space-sm);
+    margin-right: var(--space-sm);
+}
+
+.empty-message { color: var(--color-muted); }
+
+
+/* ==========================
+   8. RESPONSIVE
+   ========================== */
+
+@media (min-width: 768px) {
+    .item-list {
+        grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    }
 }

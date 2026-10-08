@@ -1,6 +1,6 @@
 // ===== Settings =====
 
-const COOL_OFF_MS = 48 * 60 * 60 * 1000;
+const COOL_OFF_MS = 1 * 60 * 1000;
 
 // ===== Saving and loading =====
 
@@ -89,8 +89,10 @@ function displayItems() {
         }
 
         const listItem = document.createElement('li');
+        listItem.className = 'item-card';
 
         const title = document.createElement('p');
+        title.className = 'item-name';
         title.textContent = `${item.name} — $${item.price.toFixed(2)}`;
         listItem.appendChild(title);
 
@@ -104,6 +106,7 @@ function displayItems() {
         }
 
         const status = document.createElement('p');
+        status.className = 'item-status';
         if (item.unlockAt > Date.now()) {
             status.textContent = getTimeLeftText(item.unlockAt);
             listItem.appendChild(status);
@@ -133,10 +136,10 @@ function displayItems() {
     });
 
     if (waitingList.children.length === 0) {
-        waitingList.innerHTML = '<li>Your cart is empty. Add something you\'re tempted to buy.</li>';
+        waitingList.innerHTML = '<li class="empty-message">Your cart is empty. Add something you\'re tempted to buy.</li>';
     }
     if (readyList.children.length === 0) {
-        readyList.innerHTML = '<li>Nothing is ready yet.</li>';
+        readyList.innerHTML = '<li class="empty-message">Nothing is ready yet.</li>';
     }
 
     const moneySaved = getMoneySaved(items);
