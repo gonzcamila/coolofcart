@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool-Off Cart</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Cool-Off Cart</h1>
+        <p id="money-saved">Money saved: $0.00</p>
+    </header>
+
+     <p id="load-error" role="alert"></p>
+
+    <main>
+        <section>
+            <h2>Add an item</h2>
+            <form id="item-form" novalidate>
+                <label for="item-name">Item name</label>
+                <input type="text" id="item-name">
+
+                <label for="item-price">Price ($)</label>
+                <input type="number" id="item-price" min="0" step="0.01">
+
+                <label for="item-link">Store link (optional)</label>
+                <input type="url" id="item-link">
+
+                <p id="form-error" role="alert"></p>
+                <button type="submit" class="btn-primary">Add to cart</button>
+            </form>
+        </section>
+        <section>
+            <h2>Cooling off</h2>
+            <ul id="waiting-list"></ul>
+        </section>
+        <section>
+            <h2>Ready to decide</h2>
+            <ul id="ready-list"></ul>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
