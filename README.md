@@ -1,7 +1,7 @@
 # Camila Gonzalez — Cool-Off Cart
 A web app built from scratch in HTML, CSS, and JavaScript for WRIT 40363.
-When I'm tempted to buy something online, I add it to the cart, and it stays
-locked for 48 hours. After that, I decide whether I still want it, and every
+When I'm tempted to buy something online, I add it to the cart and it stays
+locked for 48 hours. After that I decide whether I still want it,and every
 item I skip adds to a running total of money saved.
 
 **Live site:** https://gonzcamila.github.io/coolofcart/
