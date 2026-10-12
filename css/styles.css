@@ -8,6 +8,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    padding: 0;
 }
 
 
@@ -87,8 +88,6 @@ a:focus-visible {
 
 /* ==========================
    4. LAYOUT
-   Breakpoints used in this file:
-     768px  — tablet and larger
    ========================== */
 
 header {
