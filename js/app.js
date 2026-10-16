@@ -1,4 +1,4 @@
-//wait before you can decide to buy it
+//
 const COOL_OFF_MS = 1 * 60 * 1000;
 
 // ===== Saving and loading =====
@@ -233,6 +233,43 @@ itemForm.addEventListener('submit', event => {
     // Puts the cursor back in the name box
     nameInput.focus();
 });
+
+// ===== Dark / light theme =====
+
+const themeButton = document.getElementById('theme-toggle');
+
+// Updates the button text so it always says what clicking will do
+function updateThemeButton(isDark) {
+    if (isDark) {
+        themeButton.textContent = 'Light mode';
+    } else {
+        themeButton.textContent = 'Dark mode';
+    }
+    themeButton.setAttribute('aria-pressed', isDark);
+}
+
+// Uses the saved theme from localStorage when the page loads
+function initializeTheme() {
+    const isDark = localStorage.getItem('coolOffTheme') === 'dark';
+    if (isDark) {
+        document.body.classList.add('theme-dark');
+    }
+    updateThemeButton(isDark);
+}
+
+// Switches the theme and saves the choice
+function toggleTheme() {
+    const isDark = document.body.classList.toggle('theme-dark');
+    if (isDark) {
+        localStorage.setItem('coolOffTheme', 'dark');
+    } else {
+        localStorage.setItem('coolOffTheme', 'light');
+    }
+    updateThemeButton(isDark);
+}
+
+themeButton.addEventListener('click', toggleTheme);
+initializeTheme();
 
 // Shows any saved items as soon as the page loads.
 displayItems();

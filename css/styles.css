@@ -50,6 +50,22 @@
 }
 
 
+/* Dark theme: same names, darker colors.
+   JavaScript adds the theme-dark class to the body. */
+body.theme-dark {
+    --color-bg: #141a26;
+    --color-surface: #1f2937;
+    --color-surface-alt: #273142;
+    --color-text: #f7fafc;
+    --color-muted: #a9b4c4;
+    --color-accent: #c9a9f0;
+    --color-accent-strong: #e2d1f7;
+    --color-border: #4b3a66;
+    --color-danger: #f97066;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+
 /* ==========================
    3. BASE ELEMENT STYLES
    ========================== */
@@ -122,6 +138,8 @@ input {
     padding: var(--space-sm);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
+    background-color: var(--color-surface);
+    color: var(--color-text);
 }
 
 #form-error,
@@ -155,6 +173,16 @@ button:focus-visible {
 
 .btn-primary:hover {
     background-color: var(--color-accent-strong);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-surface);
 }
 
 .btn-danger {
