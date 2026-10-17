@@ -1,7 +1,7 @@
-This is how I used AI as a partner while building my  web app. The goal isnt for AI fully to write the app for me, but to work with it as a tool that understand new concepts and debug issues the goal was to use it as a sort of lab guide
+This folder is for how I used AI as a partner while building my app. The goal isnt for AI fully to write the app for me, but to work with it as a tool that understand new concepts and debug issues the goal was to use it as a sort of lab guide
 like in past projects.
 
-Tools Used
+Tools 
 Claude - claude.ai in a browser and in vsc
 The only AI i used for brainstorming, planning, and coding/building the app one step at a time  with an explanation of each par
 
@@ -29,27 +29,25 @@ button styles
 
 Process
 
-At the start, my prompts were broad: I asked for app ideas based on my
+my  starting prompts were broad I asked for app ideas based on my
 interests (F1, going out, fashion, and online shopping). 
 
 I told Claude to keep everything vanilla and avoid anything
 fancy, so the code was stuff i learned in the labs plus one new skill
 
-I told Claude to basically be like my "lab guide," so it would give me the code with an explanation one step at a time and I would write it and test it.
-
-after my prompts were more about checking and fixing my own work, like sending a screenshot when my CSS didn't load and asking if all my code was vanilla.
+I told Claude to basically be like my "lab guide," so it would give me the code with an explanation one step at a time and I would write it and test it after my prompts were more about checking and fixing my own work, like sending a screenshot when my CSS didn't load and asking if all my code was vanilla.
 
 
-Conversations with claude
+some convos with claude
 
-Conversation — Brainstorming and choosing the idea 
+Brainstorming and choosing the idea 
 
 My prompt: "help me brainstorm with the Project Zed assignment", then "i
-like f1, going out to bars, fashio, online shopping"
+like f1, going out to, fashio, online shopping"
 AI response (summary): Claude suggested an F1 Lights Out reaction game, a
 night-out planner, a cool-off cart, a cost-per-wear tracker, and an outfit
 builder. I also asked about a roommate chore wheel and a beer pong game.
- I chose the cool-off cart because it was something i would actually used and it for one person the reason i passed on the chore wheel because localStorage only saves on one device so roommates wouldn't see the same info, and on beer pong it would be too much to learn and explain.
+ I chose the cool-off cart because it was something i would actually used and it for one person the reason i passed on the chore wheel because localStorage only saves on one device so roommates wouldn't see the same info and on beer pong it would be too much to learn and explain.
 
 Conversation 
 
@@ -65,7 +63,7 @@ couldn't find `css/styles.css`. It said GitHub Pages needs the file name to
 match exactly, including capital letters, and listed likely causes. It also
 noticed an extra `zed` folder in my repo and that my log wasn't at the top
 level.
-What I learned: what i learned was that when creating the repository on github desktop a duplicate folder was created so i had to delete the duplicate file and the reason wht my css wasnt loading was because i had a spelling error it was style.css instead on styles.css once that was fixed my css loaded and changed the look of the web app.
+what i learned was that when creating the repository on github desktop a duplicate folder was created so i had to delete the duplicate file and the reason wht my css wasnt loading was because i had a spelling error it was style.css instead on styles.css once that was fixed my css loaded and changed the look of the web app.
 
 Conversation — Debugging: the page stopped working after adding buttons
 
