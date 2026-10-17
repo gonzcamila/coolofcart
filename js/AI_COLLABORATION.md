@@ -79,3 +79,5 @@ Adding items with no name and no price to see the error messages
 Changing the cool-off to one minute to watch items move to Ready to decide
 Clicking Skip and checking the money-saved total
 Refreshing to make sure items and the total stayed
+
+10/17/26 i ended up asking claude to help me make the app look less boring by adding borders and switching it up from my portfolio css
