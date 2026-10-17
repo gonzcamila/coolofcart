@@ -1,9 +1,6 @@
 //
 const COOL_OFF_MS = 1 * 60 * 1000;
 
-// ===== Saving and loading =====
-
-// Gets the saved items from localStorage
 function loadItems() {
     const itemsJSON = localStorage.getItem('coolOffItems');
 
@@ -22,17 +19,16 @@ function loadItems() {
     }
 }
 
-// Saves the current list of items to localStorage
 function saveItems(items) {
     localStorage.setItem('coolOffItems', JSON.stringify(items));
 }
 
-// Adds a new item to the shopping list
+// Adds new item to the list
 function addItem(name, price, link) {
     const items = loadItems();
     const addedAt = Date.now();
 
-    // Creates a new object with all the item info
+    //  new object with all the item info
     items.push({
         id: addedAt,
         name: name,
